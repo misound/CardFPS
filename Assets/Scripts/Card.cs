@@ -5,16 +5,21 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    [Header("Card Properties")]
     [SerializeField] public CardScriptableObjects cardScripts;
     [SerializeField] private Material material;
     [SerializeField] private int Atk;
     [SerializeField] private string CardName;
-    [SerializeField] private TrailRenderer trilRenderer;
+    [SerializeField] private AudioClip clip;
+    [Header("Explosion Card Effect")]
     [SerializeField] private ParticleSystem boom;
     [SerializeField] private float boomRange;
+    [Tooltip("通常是敵人")]
     [SerializeField] private LayerMask target;
-    [SerializeField] private AudioClip clip;
+    [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
+
+    private TrailRenderer trilRenderer;
     private void Awake()
     {
         trilRenderer = GetComponent<TrailRenderer>();
@@ -24,9 +29,13 @@ public class Card : MonoBehaviour
     {
         carPro(cardScripts);
         GetComponent<MeshRenderer>().material = material;
+        //省資源
         Destroy(gameObject,2f);
     }
-
+    /// <summary>
+    /// 載入分發到的資源
+    /// </summary>
+    /// <param name="card">經由GameMgr分發到的牌</param>
     void carPro(CardScriptableObjects card)
     {
         material = card.Artwork;
@@ -34,6 +43,10 @@ public class Card : MonoBehaviour
         CardName = card.Cardname;
         clip = card._audioClip;
     }
+    /// <summary>
+    /// 處理進敵人身體的邏輯
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Target>() != null)

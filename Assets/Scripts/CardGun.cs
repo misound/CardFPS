@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class CardGun : MonoBehaviour
 {
+    [Header("PhysicsGun")]
     [SerializeField] private int Damage = 10;
     [SerializeField] private float Range = 100;
+    [Header("CardGun(have bullet)")]
     [SerializeField] private Camera cam;
+    [Tooltip("開火點，類似槍口")]
     [SerializeField] private Transform FirePoint;
-    [SerializeField] private Transform camTrans;
-    [SerializeField] private Transform PlayerTrans;
     [SerializeField] private GameObject Bullet;
-    [SerializeField] private GameMgr GameMgr;
+    [Header("Audios")]
     [SerializeField] private AudioClip[] clip;
+    [Header("Components")]
+    [SerializeField] private GameMgr GameMgr;
     [SerializeField] private AudioSource audioSource;
     System.Random rand = new();
     void Start()
@@ -30,7 +33,9 @@ public class CardGun : MonoBehaviour
             Shoot();
         }
     }
-
+    /// <summary>
+    /// 開火
+    /// </summary>
     private void Shoot()
     {
         RaycastHit hit;

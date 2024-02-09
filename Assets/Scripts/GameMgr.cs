@@ -26,7 +26,7 @@ public class GameMgr : MonoBehaviour
     [SerializeField] private float maxMagicPoint;
     [Tooltip("愛心的遊戲物件")]
     [SerializeField] private GameObject[] healthPointObj;
-    public Queue<List<Image>> im = new Queue<List<Image>>();
+    //public Queue<List<Image>> im = new Queue<List<Image>>();
     private bool isDirty;
     // Start is called before the first frame update
     void Start()
@@ -40,11 +40,13 @@ public class GameMgr : MonoBehaviour
             GunBullet[i] = BulletList[random.Next(0, BulletList.Count)];
             BulletImages[i].sprite = GunBullet[i].ArtworkForUI;
         }
+        /*
         foreach (Image image in BulletImages)
         {
             im.Enqueue(BulletImages);
             Debug.Log(image.name);
         }
+        */
     }
 
     // Update is called once per frame
