@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376edd5bd7de4684fad332f866b473b7, type: 3}
+  m_Name: Card01
+  m_EditorClassIdentifier: 
+  Cardname: sword
+  Description: take 3 Dmg
+  Artwork: {fileID: 2100000, guid: 5cdbaf6f672a18a409cf628c933c2038, type: 2}
+  ArtworkForUI: {fileID: 21300000, guid: 27da2aeec11ee24459d5cdbb5be95c1c, type: 3}
+  _cardAtk: 5
+  _audioClip: {fileID: 8300000, guid: 95c23ca9a3e622a47ae60a7b1b5aab6e, type: 3}
