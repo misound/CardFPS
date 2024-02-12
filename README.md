@@ -30,5 +30,5 @@
 <hr>
 
 <p>
-  而以下是我的遊戲專題所發布的<a href="https://github.com/misound/CardFPS/files/14225401/GameDemo.pdf">簡報</a>，沒時間玩的人可以透過下面的pdf來了解遊戲的部分樣貌。
+  而以下是我的遊戲專題所發布的<a href="https://github.com/misound/CardFPS/files/14225401/GameDemo.pdf">簡報</a>，沒時間玩的人可以透過左邊的pdf來了解遊戲的部分樣貌。
 </p>
